@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('bg-intro-desktop.png');
+    background-color: hsl(0, 100%, 74%);
+}
+main {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.first-container h1{
+    font-weight: 700;
+    color: white;
+}
+.first-container p{
+    font-weight: 400;
+    color: white;
+}
+.second-container .form{
+    width: 200%;
+    margin-bottom: 12px;
+    padding: 14px 40px;
+    box-sizing: border-box;
+    background: white;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+}
+.second-container .input{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px 40px;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 5px;
+}
+
+/*mobile screen */
+@media screen and (max-width: 400px) {
+    main{
+        flex-direction: column;
+    }
+}
+span {
+    color: red;
+}
+.button-up{
+    background-color: hsl(249, 10%, 26%);
+    color: white;
+    border: 2px solid hsl(246, 25%, 77%);
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 200%;
+}
+.button-down{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    border: 2px solid white;
+    font-weight: 700;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.second-container p{
+    font-weight: 400;
+    color: hsl(246, 25%, 77%);
+    min-width: 100%;
+}
+.input:required:invalid{
+    outline: none;
+    border: none;
+    border: 1px solid hsl(0, 100%, 74%);
+    background-image: url(icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+}
+.input:invalid+span{
+    display: inline;
+    color: hsl(0, 100%, 74%);
+    float: right;
+    font-size: 14px;
+}
+.input:invalid{
+    outline: none;
+    border: none;
+    border: 1px solid hsl(154, 59%, 31%);
+}
